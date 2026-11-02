@@ -1,0 +1,134 @@
+:root {
+  color-scheme: light dark;
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+
+  --text-hero: clamp(2.875rem, 1.6rem + 6.4vw, 6rem);
+  --text-display: clamp(2rem, 1.3rem + 3vw, 3.5rem);
+  --text-large-title: 2.125rem;
+  --text-title-1: 1.75rem;
+  --text-title-2: 1.375rem;
+  --text-title-3: 1.25rem;
+  --text-headline: 1.0625rem;
+  --text-body: 1.0625rem;
+  --text-callout: 1rem;
+  --text-subhead: 0.9375rem;
+  --text-footnote: 0.8125rem;
+  --text-caption: 0.75rem;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px; --space-24: 96px;
+  --target: 44px;
+  --margin: 16px;
+  --radius-s: 8px; --radius-m: 12px; --radius-l: 18px; --radius-xl: 28px; --radius-pill: 999px;
+  --max: 1120px;
+
+  --dur-fast: 150ms; --dur-base: 250ms; --dur-slow: 450ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --ease-spring: cubic-bezier(0.34, 1.35, 0.64, 1);
+
+  --red: rgb(255 56 60);
+  --orange: rgb(255 141 40);
+  --yellow: rgb(255 204 0);
+  --pink: rgb(255 45 85);
+
+  --accent: rgb(0 122 52);
+  --accent-fill: rgb(0 122 52);
+  --on-accent: #fff;
+  --accent-tint: rgb(0 122 52 / 0.1);
+  --destructive: rgb(215 0 21);
+  --star: rgb(204 112 0);
+
+  --label: rgb(29 29 31);
+  --label-secondary: rgb(60 60 67 / 0.78);
+  --label-tertiary: rgb(60 60 67 / 0.3);
+  --placeholder: rgb(60 60 67 / 0.74);
+
+  --bg: #fff;
+  --bg-secondary: rgb(245 245 247);
+  --bg-elevated: #fff;
+  --bg-card: rgb(245 245 247);
+
+  --fill: rgb(120 120 128 / 0.2);
+  --fill-secondary: rgb(120 120 128 / 0.16);
+  --fill-tertiary: rgb(118 118 128 / 0.12);
+  --separator: rgb(60 60 67 / 0.22);
+
+  --focus-ring: color-mix(in srgb, var(--accent) 65%, transparent);
+  --shadow-s: 0 1px 2px rgb(0 0 0 / 0.06), 0 2px 8px rgb(0 0 0 / 0.05);
+  --shadow-elevated: 0 24px 60px rgb(0 0 0 / 0.18), 0 2px 8px rgb(0 0 0 / 0.08);
+  --scrim: rgb(0 0 0 / 0.38);
+
+  --glass-bg: color-mix(in srgb, var(--bg) 68%, transparent);
+  --glass-border: color-mix(in srgb, var(--label) 9%, transparent);
+  --glass-blur: blur(22px) saturate(190%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --accent: rgb(48 209 88);
+    --accent-fill: rgb(48 209 88);
+    --on-accent: #000;
+    --accent-tint: rgb(48 209 88 / 0.16);
+    --destructive: rgb(255 105 97);
+    --star: rgb(255 179 64);
+
+    --label: rgb(245 245 247);
+    --label-secondary: rgb(235 235 245 / 0.66);
+    --label-tertiary: rgb(235 235 245 / 0.3);
+    --placeholder: rgb(235 235 245 / 0.62);
+
+    --bg: #000;
+    --bg-secondary: rgb(28 28 30);
+    --bg-elevated: rgb(28 28 30);
+    --bg-card: rgb(28 28 30);
+
+    --fill: rgb(120 120 128 / 0.36);
+    --fill-secondary: rgb(120 120 128 / 0.32);
+    --fill-tertiary: rgb(118 118 128 / 0.24);
+    --separator: rgb(84 84 88 / 0.6);
+
+    --shadow-s: 0 1px 2px rgb(0 0 0 / 0.5);
+    --shadow-elevated: 0 24px 60px rgb(0 0 0 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.06);
+    --scrim: rgb(0 0 0 / 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --accent: rgb(48 209 88);
+  --accent-fill: rgb(48 209 88);
+  --on-accent: #000;
+  --accent-tint: rgb(48 209 88 / 0.16);
+  --destructive: rgb(255 105 97);
+  --star: rgb(255 179 64);
+  --label: rgb(245 245 247);
+  --label-secondary: rgb(235 235 245 / 0.66);
+  --label-tertiary: rgb(235 235 245 / 0.3);
+  --placeholder: rgb(235 235 245 / 0.62);
+  --bg: #000; --bg-secondary: rgb(28 28 30); --bg-elevated: rgb(28 28 30); --bg-card: rgb(28 28 30);
+  --fill: rgb(120 120 128 / 0.36); --fill-secondary: rgb(120 120 128 / 0.32); --fill-tertiary: rgb(118 118 128 / 0.24);
+  --separator: rgb(84 84 88 / 0.6);
+  --shadow-s: 0 1px 2px rgb(0 0 0 / 0.5);
+  --shadow-elevated: 0 24px 60px rgb(0 0 0 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.06);
+  --scrim: rgb(0 0 0 / 0.6);
+}
+:root[data-theme="light"] { color-scheme: light; }
+
+@media (prefers-contrast: more) {
+  :root {
+    --label-secondary: rgb(60 60 67 / 0.9);
+    --separator: rgb(60 60 67 / 0.6);
+    --glass-bg: var(--bg);
+  }
+}
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --label-secondary: rgb(235 235 245 / 0.88);
+    --separator: rgb(235 235 245 / 0.5);
+  }
+}
+
+@media (min-width: 600px) { :root { --margin: 24px; } }
+@media (min-width: 1024px) { :root { --margin: 32px; } }
